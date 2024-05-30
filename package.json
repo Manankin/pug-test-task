@@ -1,12 +1,16 @@
 {
+  "homepage": "https://manankin.github.io/pug-test-task/",
   "scripts": {
     "dev": "parcel src/index.pug",
     "devopen": "parcel src/index.pug --open 'google chrome'",
     "build": "parcel build src/index.pug",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.1",
+    "postcss": "^8.4.38"
   }
 }
