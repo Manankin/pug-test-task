@@ -485,6 +485,10 @@ color: #000;
     padding-top: var(--pad-tablet-main);
   }
 
+  .burger-menu {
+    display: block;
+  }
+
   .close-btn {
     display: unset;
   }
@@ -559,6 +563,10 @@ color: #000;
     padding-left: calc(var(--pad-mobile-main) * 2 - 10px);
     padding-right: calc(var(--pad-mobile-main) * 2 + 10px);
     padding-top: var(--pad-mobile-main);
+  }
+
+  .burger-menu {
+    display: block;
   }
 
   .main__content {
