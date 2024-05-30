@@ -1,6 +1,6 @@
 # pug-test-task
 
-[DEMO LINK] ()
+[DEMO LINK] (https://manankin.github.io/pug-test-task/)
 
 # implement landing according to Figma Mockup
 # use PUG preprocessor

@@ -3,10 +3,11 @@
   "scripts": {
     "dev": "parcel src/index.pug",
     "devopen": "parcel src/index.pug --open 'google chrome'",
-    "build": "parcel build src/index.pug",
+    "build": "parcel build src/index.pug --no-minify",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "pug": "^3.0.2"
   },
   "devDependencies": {
