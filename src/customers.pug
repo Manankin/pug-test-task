@@ -1,0 +1,51 @@
+include vars 
+
+.customers__header
+  .customers__header-info 
+    .customers__header-title= 'All customers'
+    .customers__header-type= 'active customers'
+  .customers__search 
+    form.search-block(action="")
+      .search-icon
+      input(type='text' class='input-field' placeholder='Search')
+.customers__table
+  .table
+    .table__row.table__row--header
+      .table__cell--name customer name
+      .table__cell--company company
+      .table__cell--phone phone number
+      .table__cell--email e-mail
+      .table__cell--country country
+      .table__cell--status status
+    .divider.divider--full-size
+    .table__content
+      each person in customers 
+        .table__row 
+          .table__cell--name
+            span.table__cell--mobile customer name
+            =person.name 
+          .table__cell--company
+            span.table__cell--mobile company
+            = person.company
+          .table__cell--phone
+            span.table__cell--mobile phone
+            = person.phone
+          .table__cell--email
+            span.table__cell--mobile e-mail
+            = person.email 
+          .table__cell--country
+            span.table__cell--mobile country
+            = person.country 
+          .table__cell--status(class={'active': person.isActive, 'not-active':!person.isActive})= person.isActive ? 'Active' : 'Inactive'
+        .divider
+.customers__footer
+  .customers__footer-info Showing data 1 to 8 of  256K entries
+  .customers__footer-pagination 
+    .customers__footer-pagination-cell--arrow= '<'
+    .customers__footer-pagination-cell--num(class='is-active') 1
+    .customers__footer-pagination-cell--num 2
+    .customers__footer-pagination-cell--num 3
+    .customers__footer-pagination-cell--num 4
+    .customers__footer-pagination-cell--empty ...
+    .customers__footer-pagination-cell--num 40
+    .customers__footer-pagination-cell--arrow= '>'

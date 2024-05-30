@@ -1,0 +1,10 @@
+include vars
+
+.main
+  .title
+    .title-priv='Hello ' + user.name
+      span.wave
+      | ,
+    a.burger-menu(href='#aside')
+  .main__content(class='customers')
+    include customers
