@@ -1,0 +1,36 @@
+//- -
+//-   var dashboard = [
+//-     { name: 'Dashboard', icon: './images/icons/dashboard-key.svg'},
+//-     { name: 'Product', icon: './images/icons/product.svg', grey: true},
+//-     { name: 'Customers', icon: './images/icons/customers.svg', white: true, fill: true},
+//-     { name: 'Income', icon: './images/icons/income.svg', grey: true},
+//-     { name: 'Promote', icon: './images/icons/promote.svg', grey: true},
+//-     { name: 'Help', icon: './images/icons/help.svg', grey: true},
+//-   ];
+
+//- -
+//-   var user = {name: 'Dmytro', photo:'./images/evano.png', job: 'Project Manager'};
+
+//- include main.js
+include vars
+
+aside.sidebar(id='aside')
+  header.sidebar__header.company-info
+    .company-info__logo
+      .logo
+    .company-info__title
+      | Dashboard #[span.version-type v.01]
+    a.close-btn(href='#')
+
+  .sidebar__nav.nav 
+    each item in dashboard
+      .nav__item(class={'is-active': item.fill})
+        img(class='nav__item-logo' src='.'+item.icon alt='icon for link')
+        .nav__item-name= item.name
+        .chevron(class={'is-grey' : item.grey, 'is-white': item.white})
+
+  .sidebar__footer.user-info 
+    img(class="user-info__photo" src='../images/evano.png' alt="user photo")
+    .user-info__about
+      .user-info__name= user.name
+      .user-info__job= user.job
